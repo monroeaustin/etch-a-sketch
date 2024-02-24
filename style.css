@@ -4,16 +4,37 @@
     box-sizing: border-box;
 }
 .cntr{
+    height: 1600px;
     width: 1600px;
     flex-wrap:wrap;
-    min-width: 1600px;
-    min-height: 1600px;
+    flex-basis: 2;
+    flex-shrink: 1;
+}
+
+#resetbtn{
+    flex-basis: 0.5;
+    min-height: 50px;
+    min-width: 100px;
+    margin:auto;
+    border-radius: 10px;
+}
+
+#resetbtn:hover{
+    color: green;
+    background-color: white;
+    font-weight: bold;
 }
 .hovered{
 
     background-color: wheat !important;
 }
 
-.unhovered{
-    background-color: blue !important;
+
+.regular {
+    /* This code styles an unused/Non-Touched DIV */
+    background-color: white;
+}
+body{
+    display: flex;
+    justify-content: space-evenly;
 }

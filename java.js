@@ -2,27 +2,17 @@ container = document.querySelector('.cntr')
 
 
 
-
-
 function createGrid(b) {
 
 
     for (let i = 0;i < b; ++i){
-        const newDiv = document.createElement('div')
-        newDiv.classList.add('unhovered')
-        
-            // Link Event Listener to newly created DIVs
-        
 
-           // Link Event Listener to newly created DIVs
-           newDiv.addEventListener("onclick", (e) => {
-            newDiv.classList.add('hovered')
-            console.log("Hovered should work!")
-        }
-        );
-
+        // Regular class added for Default Styling
+        const newDiv = document.createElement('div');
+        newDiv.classList.add('regular');
+        
+        // Typical Styling Default CSS within JS/DOM
         newDiv.innerText = "testing";
-        newDiv.style.backgroundColor = "red";
         newDiv.style.height = "100px";
         newDiv.style.width = "100px";
         newDiv.style.border = "solid 1px black";
@@ -31,17 +21,19 @@ function createGrid(b) {
       
 
         container.appendChild(newDiv)
-        // Link Event Listener to newly created DIVs
-
-        const allDivs = document.querySelectorAll('.unhovered')
-
-        allDivs.forEach(function (div){
-            div.addEventListener('click', function(){
-            console.log("You clicked a square")
-            })
-        })
     
     } 
-}
+    // After creation --> Simply added eventListener to all Items
+    const allDivs = document.querySelectorAll('.regular')
 
-createGrid(256)
+    allDivs.forEach(function(div) {
+        div.addEventListener('mouseover', function() {
+          div.classList.remove('regular')
+          div.classList.add('hovered')
+
+        //   Creats and modify classes based on the status of the hover 
+        });
+      });
+    }
+
+createGrid(256);
