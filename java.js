@@ -3,14 +3,23 @@ const resetbtn = document.getElementById('resetbtn')
 const allDivs = document.querySelectorAll('.allDivs')
 
 // All Global Variable Elements Above
+function askPrompt () {
+  let askGridAmount = prompt("Please choose the grid amount Number x Number (ie: 16x16)")
+
+  if (askGridAmount > 100 || askGridAmount < 1 ){
+    alert("Please select a value between 1-100")
+  } else {
+  let b = parseInt(askGridAmount)
+  createGrid(b)
+}}
+
+
+
 
 function resetGame(){
-  // let askGridAmount = prompt("Please choose the grid amount Number x Number (ie: 16x16)")
-  // askGridAmount
-  // let b = parseInt(askGridAmount)
-  // document.body.appendChild(container)
-  createGrid(16)
-  console.log('This shouldve created a new game.')
+
+  askPrompt()
+  
 }
 
 function createGrid(b) {
@@ -18,7 +27,7 @@ function createGrid(b) {
 
    // Auto Size Container Based on Entry gridEntry x 100 = maxHeightnWidth
     c = b * b
-    maxHeightnWid = b * 100
+    maxHeightnWid = b * 10
     let pixelHeight = maxHeightnWid + "px"
     let pixelwidth = maxHeightnWid + "px"
     container.style.maxHeight = pixelHeight
@@ -34,9 +43,8 @@ function createGrid(b) {
         newDiv.classList.add('allDivs');
         
         // Typical Styling Default CSS within JS/DOM
-        newDiv.innerText = "testing";
-        newDiv.style.height = "100px";
-        newDiv.style.width = "100px";
+        newDiv.style.height = "10px";
+        newDiv.style.width = "10px";
         newDiv.style.border = "solid 1px black";
         
         container.appendChild(newDiv)
@@ -67,10 +75,7 @@ resetbtn.addEventListener('click', function(){
     }
 
     removeAllChildNodes(container)
-
-    createGrid(16)
-
-    // createGrid(prompt("Please choose your layout"))
+    resetGame()
 })
 
 createGrid(6)
