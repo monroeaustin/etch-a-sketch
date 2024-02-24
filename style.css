@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.cntr{
+    width: 1600px;
+    flex-wrap:wrap;
+    min-width: 1600px;
+    min-height: 1600px;
+}
+.hovered{
+
+    background-color: wheat !important;
+}
+
+.unhovered{
+    background-color: blue !important;
+}
