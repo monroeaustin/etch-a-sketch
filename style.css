@@ -4,11 +4,11 @@
     box-sizing: border-box;
 }
 .cntr{
-    height: 1600px;
-    width: 1600px;
+    /* height: 1600px;
+    width: 1600px; */
     flex-wrap:wrap;
-    flex-basis: 2;
-    flex-shrink: 1;
+    /* flex-basis: 2;
+    flex-shrink: 1; */
 }
 
 #resetbtn{
