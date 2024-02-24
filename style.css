@@ -9,6 +9,8 @@
     flex-wrap:wrap;
     /* flex-basis: 2;
     flex-shrink: 1; */
+    margin: auto;
+    margin-top: 200px;
 }
 
 #resetbtn{
@@ -37,4 +39,6 @@
 body{
     display: flex;
     justify-content: space-evenly;
+    min-width: 100vh;
+    flex-direction: column-reverse;
 }

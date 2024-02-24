@@ -33,6 +33,7 @@ function createGrid(b) {
     container.style.maxHeight = pixelHeight
     container.style.maxWidth = pixelwidth
     container.style.display = "flex";
+    container.style.justifyContent = "center"
 
 
     for (let i = 0;i < c; ++i){
