@@ -42,3 +42,8 @@ body{
     min-width: 100vh;
     flex-direction: column-reverse;
 }
+h1{
+    text-align: center;
+    margin-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}

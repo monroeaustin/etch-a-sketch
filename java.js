@@ -2,6 +2,15 @@ container = document.querySelector('.cntr')
 const resetbtn = document.getElementById('resetbtn')
 const allDivs = document.querySelectorAll('.allDivs')
 
+
+const createH1 = document.createElement('H1')
+createH1
+
+createH1.innerText = "TOP: Etch-a-Sketch Project"
+
+document.body.insertBefore(createH1,resetbtn)
+
+
 // All Global Variable Elements Above
 function askPrompt () {
   let askGridAmount = prompt("Please choose the grid amount Number x Number (ie: 16x16)")
