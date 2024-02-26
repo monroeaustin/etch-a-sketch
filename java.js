@@ -36,13 +36,13 @@ function createGrid(b) {
 
    // Auto Size Container Based on Entry gridEntry x 100 = maxHeightnWidth
     c = b * b
-    maxHeightnWid = b * 10
-    let pixelHeight = maxHeightnWid + "px"
-    let pixelwidth = maxHeightnWid + "px"
-    container.style.maxHeight = pixelHeight
-    container.style.maxWidth = pixelwidth
-    container.style.display = "flex";
-    container.style.justifyContent = "center"
+    // maxHeightnWid = b * 10
+    // let pixelHeight = maxHeightnWid + "px"
+    // let pixelwidth = maxHeightnWid + "px"
+    // container.style.maxHeight = pixelHeight
+    // container.style.maxWidth = pixelwidth
+    // container.style.display = "flex";
+    // container.style.justifyContent = "center"
 
 
     for (let i = 0;i < c; ++i){
@@ -53,8 +53,12 @@ function createGrid(b) {
         newDiv.classList.add('allDivs');
         
         // Typical Styling Default CSS within JS/DOM
-        newDiv.style.height = "10px";
-        newDiv.style.width = "10px";
+
+
+        let pixelHeight = 960 / b +"px"
+        let pixelWidth = 960 / b +"px"
+        newDiv.style.height = pixelHeight;
+        newDiv.style.width = pixelWidth
         newDiv.style.border = "solid 1px black";
         
         container.appendChild(newDiv)

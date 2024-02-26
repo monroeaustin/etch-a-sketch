@@ -4,8 +4,9 @@
     box-sizing: border-box;
 }
 .cntr{
-    /* height: 1600px;
-    width: 1600px; */
+    display: flex;
+    width: 960px;
+    height: 960px;
     flex-wrap:wrap;
     /* flex-basis: 2;
     flex-shrink: 1; */
@@ -38,8 +39,8 @@
 }
 body{
     display: flex;
-    justify-content: space-evenly;
-    min-width: 100vh;
+    justify-content: center;
+    align-items: center;
     flex-direction: column-reverse;
 }
 h1{
